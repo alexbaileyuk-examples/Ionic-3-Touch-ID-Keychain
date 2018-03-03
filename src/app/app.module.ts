@@ -7,6 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { ToastController } from 'ionic-angular';
+import { KeychainTouchId } from '@ionic-native/keychain-touch-id';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,6 +27,8 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    KeychainTouchId,
+    ToastController,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

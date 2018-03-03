@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+
+    <p>Test out the keychain storage on Android or iOS which saves simple key/value pairs protected by Fingerprint Auth/Touch ID.</p>
+    <p>Type a string, store it, close the app then re-open and retrieve the value! All values are encrypted!</p>
+
+    <ion-list style="margin-bottom: 20px;">
+      <ion-item>
+        <ion-label fixed>String to Store</ion-label>
+        <ion-input type="text" [(ngModel)]="strValue"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="storeKey()">Store Key</button>
+    <button ion-button block (click)="getKey()">Retrieve Key</button>
+
+  </ion-list>
 </ion-content>
